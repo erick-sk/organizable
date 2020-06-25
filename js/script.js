@@ -13,10 +13,11 @@ async function init() {
     }
   })
     .then(response => response.json())
-    .then(data => console.log(data))
+    .then(data => data);
 }
 
 
-login.addEventListener('click', (event) => {
-  init();
+login.addEventListener('click', async (event) => {
+  const data = await (init());
+  console.log(data.token)
 });

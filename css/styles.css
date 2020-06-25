@@ -1,9 +1,92 @@
-/* *{
+/* GENERAL STYLES */
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-} */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 body{
-  background-color: lightblue;
+  background-color: #FAFBFC;
+  font-family: 'Roboto', sans-serif;
+  color: #172B4D;
 }
+
+
+/* BUTTONS */
+.button{
+  border: none;
+  color: #fff;
+  padding: .8em 1.7em;
+  border-radius: .3em;
+}
+
+.button:hover{
+  cursor: pointer;
+}
+
+.button-green{
+  background-color: #5AAC44;
+}
+
+.button-red{
+  background-color: #CF513D;
+}
+
+.button-normal{
+  background-color: #EBECF0;
+  color:#172B4D;
+}
+
+/* ****** CONTAINERS ******/
+
+/* header */
+.header__container{
+  background-color: #58595A;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.header__image{
+  display: block;
+}
+
+/* warper principal */
+.main-container{
+  width: 80%;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  justify-content: start;
+}
+
+/* Navegacion */
+.nav-container{
+  width: 240px;
+}
+.menu{
+  list-style: none;
+}
+.menu__item{
+  margin: 1em 0;
+}
+.menu__link{
+  display: block;
+  padding: .5em 2em;
+  text-decoration: none;
+  color: #172B4D;
+}
+
+.selected-item{
+  background-color: #E4F0F6;
+  color: #0079BF;
+  border-radius: .3em;
+}
+
+/* body aqui van los boards */
+.boards-container{
+  width: 80%;
+}
+
