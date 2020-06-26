@@ -288,3 +288,11 @@ body {
 .board__star-container {
   text-align: right;
 }
+
+.board__unstarred {
+  visibility: hidden;
+}
+
+.board:hover .board__unstarred {
+  visibility: visible;
+}

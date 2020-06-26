@@ -40,7 +40,7 @@ function createBoard() {
   board.innerHTML = `
     <h1 class="board__title">${boardTitle.value}</h1>
     <div class="board__star-container">
-      <img class="board__star" src="assets/star.svg" alt="" />
+      <img class="board__star board__unstarred" src="assets/star.svg" alt="" />
     </div>
   `;
   board.style.background = modalContainer.style.backgroundColor;
