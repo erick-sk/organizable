@@ -1,7 +1,7 @@
 // local storage
 
 // Board section
-const modal = document.querySelector('#myModal');
+const modal = document.querySelector('.modal');
 const modalBtn = document.querySelector('.boards__modal-button');
 const span = document.getElementsByClassName('close')[0];
 
@@ -20,7 +20,7 @@ window.onclick = function(event) {
   }
 };
 
-const boardBtn = document.getElementById('board__create-button');
+const boardBtn = document.querySelector('.modal__create-button');
 boardBtn.addEventListener('click', createBoard);
 
 function createBoard() {
@@ -28,7 +28,7 @@ function createBoard() {
   const board = document.createElement('div');
   board.classList.add('board');
   board.innerHTML = `
-    <h1 id="board-title">${boardTitle.value}</h1>
+    <h1 class="board__title">${boardTitle.value}</h1>
     <div class="board__star-container">
       <img class="board__star" src="assets/star.svg" alt="" />
     </div>
