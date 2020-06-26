@@ -1,5 +1,5 @@
 /* GENERAL STYLES */
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -7,36 +7,35 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-body{
-  background-color: #FAFBFC;
+body {
+  background-color: #fafbfc;
   font-family: 'Roboto', sans-serif;
-  color: #172B4D;
+  color: #172b4d;
 }
-
 
 /* BUTTONS */
-.button{
+.button {
   border: none;
   color: #fff;
-  padding: .8em 1.7em;
-  border-radius: .3em;
+  padding: 0.8em 1.7em;
+  border-radius: 0.3em;
 }
 
-.button:hover{
+.button:hover {
   cursor: pointer;
 }
 
-.button-green{
-  background-color: #5AAC44;
+.button-green {
+  background-color: #5aac44;
 }
 
-.button-red{
-  background-color: #CF513D;
+.button-red {
+  background-color: #cf513d;
 }
 
-.button-normal{
-  background-color: #EBECF0;
-  color:#172B4D;
+.button-normal {
+  background-color: #ebecf0;
+  color: #172b4d;
 }
 
 /* FORMs */
@@ -64,7 +63,7 @@ body{
   margin: 4em auto 0 auto;
 }
 
-.input-container{
+.input-container {
   display: flex;
   flex-direction: column;
 }
@@ -88,19 +87,19 @@ body{
 /* ****** CONTAINERS ******/
 
 /* header */
-.header__container{
-  background-color: #58595A;
+.header__container {
+  background-color: #58595a;
   height: 40px;
   display: flex;
   justify-content: center;
 }
 
-.header__image{
+.header__image {
   display: block;
 }
 
 /* warper principal */
-.main-container{
+.main-container {
   width: 80%;
   margin: 0 auto;
   height: 100%;
@@ -109,30 +108,75 @@ body{
 }
 
 /* Navegacion */
-.nav-container{
+.nav-container {
   width: 240px;
 }
-.menu{
+.menu {
   list-style: none;
 }
-.menu__item{
+.menu__item {
   margin: 1em 0;
 }
-.menu__link{
+.menu__link {
   display: block;
-  padding: .5em 2em;
+  padding: 0.5em 2em;
   text-decoration: none;
-  color: #172B4D;
+  color: #172b4d;
 }
 
-.selected-item{
-  background-color: #E4F0F6;
-  color: #0079BF;
-  border-radius: .3em;
+.selected-item {
+  background-color: #e4f0f6;
+  color: #0079bf;
+  border-radius: 0.3em;
 }
 
 /* body aqui van los boards */
-.boards-container{
+.boards-container {
   width: 80%;
 }
 
+/* profile page */
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin-left: 150px;
+  margin-top: 100px;
+}
+
+.profile-form {
+  width: 390px;
+  height: 430px;
+  padding: 35px 90px 0px 90px;
+  background: #f4f5f7;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+}
+
+.profile-input {
+  margin: 0 0 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.profile-input label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.profile-input input {
+  outline: none;
+  padding: 5px;
+  background: #fafbfc;
+  border: 1px solid #ebecf0;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.btn-form-profile {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 35px;
+}

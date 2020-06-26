@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>My Profile</title>
+  </head>
+  <body>
+    <header class="header__container">
+      <img class="header__image" src="assets/organizable-logo.svg" alt="" />
+    </header>
+
+    <div class="main-container">
+      <nav class="nav-container">
+        <ul class="menu">
+          <li class="menu__item">
+            <a class="menu__link selected-item" href="/index.html">My boards</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="">Closed boards</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="">My Profile</a>
+          </li>
+          <li class="menu__item"><a class="menu__link" href="">Log out</a></li>
+        </ul>
+      </nav>
+
+      <main class="profile-container">
+          <form class="profile-form"  action="/profile.html" method="POST">
+            <div class="profile-input">
+              <label for="username">Username</label>
+              <input type="text" name="" id="username" placeholder="codeable" />
+            </div>
+            <div class="profile-input">
+              <label for="mail">Email</label>
+              <input type="email" name="" id="mail" placeholder="codeable@mail.com"/>
+            </div>
+            <div class="profile-input">
+              <label for="first-name">First Name</label>
+              <input type="text" name="" id="first-name" placeholder="User" />
+            </div>
+            <div class="profile-input">
+              <label for="last-name">Last Name</label>
+              <input type="text" name="" id="last-name" placeholder="Test" />
+            </div>
+            <div class="btn-form-profile">
+              <button type="submit" class="button button-normal">Edit</button>
+              <button type="submit" class="button button-red">Cancel</button>
+          </form>
+        </div>
+      </main>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
