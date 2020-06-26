@@ -1,6 +1,6 @@
 // local storage
 
-// Board section
+// Modal functionality
 const modal = document.querySelector('.modal');
 const modalBtn = document.querySelector('.boards__modal-button');
 const span = document.getElementsByClassName('close')[0];
@@ -20,8 +20,18 @@ window.onclick = function(event) {
   }
 };
 
+// Create board functionality
 const boardBtn = document.querySelector('.modal__create-button');
 boardBtn.addEventListener('click', createBoard);
+
+const colorBtn = document.querySelectorAll('.modal__color');
+colorBtn.forEach(color => color.addEventListener('click', setModalColor));
+const modalContainer = document.querySelector('.modal__content');
+
+function setModalColor() {
+  const { color } = this.dataset;
+  modalContainer.style.backgroundColor = color;
+}
 
 function createBoard() {
   const boardTitle = document.getElementById('modal__title');
@@ -33,5 +43,6 @@ function createBoard() {
       <img class="board__star" src="assets/star.svg" alt="" />
     </div>
   `;
+  board.style.background = modalContainer.style.backgroundColor;
   document.querySelector('.boards-container').prepend(board);
 }

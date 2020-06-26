@@ -151,7 +151,7 @@ body {
 
 /* Modal Content/Box */
 .modal__content {
-  background: #0079bf;
+  background-color: gray;
   border: none;
   border-radius: 3px;
   margin: 10% auto;
@@ -265,7 +265,6 @@ body {
 
 /* Board */
 .board {
-  background-color: #40bf00;
   width: 190px;
   height: 96px;
   border-radius: 3px;
