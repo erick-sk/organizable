@@ -1,38 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Boards</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Boards</title>
-  <link rel="stylesheet" href="css/styles.css">
-</head>
+  <body>
+    <header class="header__container">
+      <img class="header__image" src="assets/organizable-logo.svg" alt="" />
+    </header>
 
-<body>
-  <header class="header__container">
-    <img class="header__image" src="assets/organizable-logo.svg" alt="">
-  </header>
+    <div class="main-container">
+      <nav class="nav-container">
+        <ul class="menu">
+          <li class="menu__item">
+            <a class="menu__link selected-item" href="">My boards</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="">Closed boards</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="">My Profile</a>
+          </li>
+          <li class="menu__item"><a class="menu__link" href="">Log out</a></li>
+        </ul>
+      </nav>
 
-  <div class="main-container">
+      <main class="boards-container">
+        <button class="boards__modal-button">Create a new Board</button>
+      </main>
 
-    <nav class="nav-container">
-      <ul class="menu">
-        <li class="menu__item"><a class="menu__link selected-item" href="">My boards</a></li>
-        <li class="menu__item"><a class="menu__link" href="">Closed boards</a></li>
-        <li class="menu__item"><a class="menu__link" href="">My Profile</a></li>
-        <li class="menu__item"><a class="menu__link" href="">Log out</a></li>
-      </ul>
-    </nav>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <input type="text" name="board-title" id="board-title" />
+          <button id="board__create-button">Create Board</button>
+        </div>
+      </div>
+    </div>
 
-    <main class="boards-container">
-      <!-- <button class="btn-login button button-normal">Login</button> -->
-    </main>
-
-  </div>
-
-
-
-  <script src="js/myBoards.js"></script>
-</body>
-
+    <script src="js/myBoards.js"></script>
+  </body>
 </html>

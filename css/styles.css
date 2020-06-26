@@ -1,48 +1,53 @@
 /* GENERAL STYLES */
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
 
-body{
-  background-color: #FAFBFC;
-  font-family: 'Roboto', sans-serif;
-  color: #172B4D;
+html {
+  width: 100%;
+  height: 100%;
 }
 
+body {
+  background-color: #fafbfc;
+  font-family: "Roboto", sans-serif;
+  color: #172b4d;
+  height: 100%;
+}
 
 /* BUTTONS */
-.button{
+.button {
   border: none;
   color: #fff;
-  padding: .8em 1.7em;
-  border-radius: .3em;
+  padding: 0.8em 1.7em;
+  border-radius: 0.3em;
 }
 
-.button:hover{
+.button:hover {
   cursor: pointer;
 }
 
-.button-green{
-  background-color: #5AAC44;
+.button-green {
+  background-color: #5aac44;
 }
 
-.button-red{
-  background-color: #CF513D;
+.button-red {
+  background-color: #cf513d;
 }
 
-.button-normal{
-  background-color: #EBECF0;
-  color:#172B4D;
+.button-normal {
+  background-color: #ebecf0;
+  color: #172b4d;
 }
 
 /* LOGIN FORM */
-.login-form{
-  border-radius: .3em;
-  background-color: #F4F5F7;
+.login-form {
+  border-radius: 0.3em;
+  background-color: #f4f5f7;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   height: 354px;
   width: 450px;
@@ -54,7 +59,7 @@ body{
   justify-content: space-between;
 }
 
-.input-container{
+.input-container {
   display: flex;
   flex-direction: column;
 }
@@ -62,19 +67,19 @@ body{
 /* ****** CONTAINERS ******/
 
 /* header */
-.header__container{
-  background-color: #58595A;
+.header__container {
+  background-color: #58595a;
   height: 40px;
   display: flex;
   justify-content: center;
 }
 
-.header__image{
+.header__image {
   display: block;
 }
 
 /* warper principal */
-.main-container{
+.main-container {
   width: 80%;
   margin: 0 auto;
   height: 100%;
@@ -83,30 +88,137 @@ body{
 }
 
 /* Navegacion */
-.nav-container{
+.nav-container {
   width: 240px;
 }
-.menu{
+.menu {
   list-style: none;
 }
-.menu__item{
+.menu__item {
   margin: 1em 0;
 }
-.menu__link{
+.menu__link {
   display: block;
-  padding: .5em 2em;
+  padding: 0.5em 2em;
   text-decoration: none;
-  color: #172B4D;
+  color: #172b4d;
 }
 
-.selected-item{
-  background-color: #E4F0F6;
-  color: #0079BF;
-  border-radius: .3em;
+.selected-item {
+  background-color: #e4f0f6;
+  color: #0079bf;
+  border-radius: 0.3em;
 }
 
 /* body aqui van los boards */
-.boards-container{
+.boards-container {
   width: 80%;
+  padding: 30px;
+  display: flex;
+  flex-flow: row wrap;
 }
 
+.boards__modal-button {
+  background: #f0f2f5;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  width: 190px;
+  height: 96px;
+  top: 50%;
+  left: 50%;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #172b4d;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background: #0079bf;
+  border-radius: 3px;
+  margin: 10% auto;
+  padding: 6px 8px;
+  border: 1px solid #888;
+  width: 190px;
+  height: 70px;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  right: 5px;
+  top: 0px;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.board {
+  background-color: #0079bf;
+  width: 190px;
+  height: 96px;
+  border-radius: 3px;
+  padding: 8px;
+  margin-right: 16px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+
+#board-title {
+  outline: none;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.25);
+  width: 154px;
+}
+
+#board__create-button {
+  position: absolute;
+  top: 75px;
+  left: 0;
+  background: #f4f5f7;
+  border-radius: 3px;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  padding: 6px 12px;
+  color: #172b4d;
+  border: none;
+  outline: none;
+}
+
+.board__star {
+  text-align: right;
+}
