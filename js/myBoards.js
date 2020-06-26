@@ -28,9 +28,9 @@ function createBoard() {
   const board = document.createElement('div');
   board.classList.add('board');
   board.innerHTML = `
-    <h1 className="board-title">${boardTitle.value}</h1>
-    <div className="board__star-container">
-      <img className="board__star" src="assets/star.svg" alt="" />
+    <h1 id="board-title">${boardTitle.value}</h1>
+    <div class="board__star-container">
+      <img class="board__star" src="assets/star.svg" alt="" />
     </div>
   `;
   document.querySelector('.boards-container').prepend(board);
