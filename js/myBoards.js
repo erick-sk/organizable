@@ -20,12 +20,18 @@ window.onclick = function(event) {
   }
 };
 
-// Create board functionality
-const boardBtn = document.querySelector('.modal__create-button');
-boardBtn.addEventListener('click', createBoard);
+// Board functionality
+const createBoardBtn = document.querySelector('.modal__create-button');
+const boardsContainer = document.querySelector('.boards-container');
+const openModalBtn = document.querySelector('.boards__modal-button');
 
-const colorBtn = document.querySelectorAll('.modal__color');
-colorBtn.forEach(color => color.addEventListener('click', setModalColor));
+createBoardBtn.addEventListener('click', function() {
+  const board = createBoard();
+  boardsContainer.insertBefore(board, openModalBtn);
+});
+
+const colorBtns = document.querySelectorAll('.modal__color');
+colorBtns.forEach(colorBtn => colorBtn.addEventListener('click', setModalColor));
 const modalContainer = document.querySelector('.modal__content');
 
 function setModalColor() {
@@ -39,10 +45,15 @@ function createBoard() {
   board.classList.add('board');
   board.innerHTML = `
     <h1 class="board__title">${boardTitle.value}</h1>
-    <div class="board__star-container">
-      <img class="board__star board__unstarred" src="assets/star.svg" alt="" />
+    <div class="board__actions">
+      <img class="action delete" src="assets/delete-icon.svg" alt="" />
+      <img class="action star" src="assets/star.svg" alt="" />
     </div>
   `;
   board.style.background = modalContainer.style.backgroundColor;
-  document.querySelector('.boards-container').prepend(board);
+  const star = board.querySelector('.star');
+  star.addEventListener('click', function() {
+    star.classList.toggle('starred');
+  });
+  return board;
 }
