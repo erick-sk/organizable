@@ -176,6 +176,59 @@ body {
   width: 154px;
 }
 
+/* Palette */
+.modal__palette {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 5px;
+  width: fit-content;
+  position: absolute;
+  top: 0;
+  right: -80px;
+}
+
+.modal__color {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.modal__color:hover {
+  border: solid 1px white;
+}
+
+.modal__color--blue {
+  background-color: #0079bf;
+}
+.modal__color--yellow {
+  background-color: #d29034;
+}
+.modal__color--green {
+  background-color: #519839;
+}
+.modal__color--red {
+  background-color: #b04632;
+}
+.modal__color--purple {
+  background-color: #89609e;
+}
+.modal__color--pink {
+  background-color: #cd5a90;
+}
+.modal__color--lightgreen {
+  background-color: #4bbf6b;
+}
+.modal__color--lightblue {
+  background-color: #0aaecb;
+}
+.modal__color--gray {
+  background-color: #838c90;
+}
+
 .modal__create-button {
   position: absolute;
   top: 75px;
