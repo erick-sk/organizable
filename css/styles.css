@@ -116,6 +116,7 @@ body {
   padding: 30px;
   display: flex;
   flex-flow: row wrap;
+  align-content: start;
 }
 
 .boards__modal-button {
@@ -187,7 +188,7 @@ body {
   height: 96px;
   border-radius: 3px;
   padding: 8px;
-  margin-right: 16px;
+  margin: 0 16px 16px 0;
   display: flex;
   flex-flow: column wrap;
   justify-content: space-between;
@@ -219,6 +220,6 @@ body {
   outline: none;
 }
 
-.board__star {
+.board__star-container {
   text-align: right;
 }
