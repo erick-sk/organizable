@@ -39,24 +39,50 @@ body{
   color:#172B4D;
 }
 
-/* LOGIN FORM */
-.login-form{
+/* FORMs */
+.form-container{
   border-radius: .3em;
   background-color: #F4F5F7;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  height: 354px;
-  width: 450px;
-  margin: 8em auto 0 auto;
-  padding: 5em 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
 
+.login-form{
+  height: 354px;
+  width: 450px;
+  padding: 4em 0;
+  margin: 8em auto 0 auto;
+}
+
+.signup-form{
+  height: 500px;
+  width: 450px;
+  padding: 2em 0;
+  margin: 4em auto 0 auto;
+}
+
 .input-container{
   display: flex;
   flex-direction: column;
+}
+
+.form-label{
+  font-weight: bold;
+  margin-bottom: .4em;
+}
+
+.form-input{
+  border: 1px solid #0079BF;
+  border-radius: .3em;
+  padding: .5em;
+}
+
+.form-link{
+  text-decoration: none;
+  color: #0079BF;
 }
 
 /* ****** CONTAINERS ******/
