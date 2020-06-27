@@ -70,8 +70,14 @@ function createBoard() {
       starredDiv.style.display = 'block';
     } else {
       insertBoard(normalBoards, board, openModalBtn);
-      starredDiv.style.display = 'none';
+      if (starredBoards.childElementCount === 0) {
+        starredDiv.style.display = 'none';
+      }
     }
   });
   return board;
 }
+
+// if (starredBoards.childElementCount === 0) {
+
+// }
