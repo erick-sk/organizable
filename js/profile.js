@@ -74,6 +74,18 @@ async function deleteUser() {
   window.location.href = "login.html";
 }
 
+async function closeSession() {
+  await fetch("http://localhost:3000/logout", {
+    method: 'POST',
+    mode: 'cors',
+    headers: {
+      "Authorization": `Token token=${user.token}`,
+    }
+  });
+  localStorage.clear();
+  window.location.href = "login.html";
+}
+
 btnEdit.addEventListener('click', (event) => {
   event.preventDefault();
   btnSave.classList.remove('hide');
@@ -92,6 +104,12 @@ btnDelete.addEventListener('click', event => {
   event.preventDefault();
   const check = confirm('Are you sure do you want delete your user account?');
   if (check) deleteUser();
+});
+
+document.querySelector('#logout').addEventListener('click', event => {
+  event.preventDefault();
+  const check = confirm('Do you want logout?');
+  if (check) closeSession();
 });
 
 showUserData();

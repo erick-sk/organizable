@@ -1,73 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Boards</title>
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Boards</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
 
 
-  <body>
-    <header class="header__container">
-      <img class="header__image" src="assets/organizable-logo.svg" alt="" />
-    </header>
+<body>
+  <header class="header__container">
+    <img class="header__image" src="assets/organizable-logo.svg" alt="" />
+  </header>
 
-    <div class="main-container">
-      <nav class="nav-container">
-        <ul class="menu">
-          <li class="menu__item">
-            <a class="menu__link selected-item" href="">My boards</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="">Closed boards</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="profile.html">My Profile</a>
-          </li>
-          <li class="menu__item"><a class="menu__link" href="">Log out</a></li>
-        </ul>
-      </nav>
+  <div class="main-container">
+    <nav class="nav-container">
+      <ul class="menu">
+        <li class="menu__item">
+          <a class="menu__link selected-item" href="">My boards</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="">Closed boards</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="profile.html">My Profile</a>
+        </li>
+        <li class="menu__item" id="logout"><a class="menu__link" href="">Log out</a></li>
+      </ul>
+    </nav>
 
-      <main class="boards-container">
-        <div class="boards__starred">
-          <header>
-            <h2 class="boards__container-title"><img src="/assets/star.svg" alt="">Starred Boards</h2>
-          </header>
-          <div class="starred__container">
-          </div>
-        </div>
-        <div class="boards__unstarred">
-          <header>
-            <h2 class="boards__container-title"><img src="/assets/keys.svg" alt="">Your Boards</h2>
-          </header>
-          <div class="unstarred__container">
-            <button class="boards__modal-button">Create a new Board</button>
-          </div>
-        </div>
-      </main>
-
-      <div class="modal">
-        <div class="modal__content">
-          <span class="close">&times;</span>
-          <input type="text" name="modal__title" id="modal__title" autocomplete="off" />
-          <button class="modal__create-button">Create Board</button>
-          <div class="modal__palette">
-            <button class="modal__color modal__color--blue" data-color="#0079BF"></button>
-            <button class="modal__color modal__color--yellow" data-color="#D29034"></button>
-            <button class="modal__color modal__color--green" data-color="#519839"></button>
-            <button class="modal__color modal__color--red" data-color="#B04632"></button>
-            <button class="modal__color modal__color--purple" data-color="#89609E"></button>
-            <button class="modal__color modal__color--pink" data-color="#CD5A90"></button>
-            <button class="modal__color modal__color--lightgreen" data-color="#4BBF6B"></button>
-            <button class="modal__color modal__color--lightblue" data-color="#0AAECB"></button>
-            <button class="modal__color modal__color--gray" data-color="#838C90"></div>
-            </div>
-          </div>
+    <main class="boards-container">
+      <div class="boards__starred">
+        <header>
+          <h2 class="boards__container-title"><img src="/assets/star.svg" alt="">Starred Boards</h2>
+        </header>
+        <div class="starred__container">
         </div>
       </div>
-    </div>
+      <div class="boards__unstarred">
+        <header>
+          <h2 class="boards__container-title"><img src="/assets/keys.svg" alt="">Your Boards</h2>
+        </header>
+        <div class="unstarred__container">
+          <button class="boards__modal-button">Create a new Board</button>
+        </div>
+      </div>
+    </main>
 
-    <script src="js/myBoards.js"></script>
-  </body>
+    <div class="modal">
+      <div class="modal__content">
+        <span class="close">&times;</span>
+        <input type="text" name="modal__title" id="modal__title" autocomplete="off" />
+        <button class="modal__create-button">Create Board</button>
+        <div class="modal__palette">
+          <button class="modal__color modal__color--blue" data-color="#0079BF"></button>
+          <button class="modal__color modal__color--yellow" data-color="#D29034"></button>
+          <button class="modal__color modal__color--green" data-color="#519839"></button>
+          <button class="modal__color modal__color--red" data-color="#B04632"></button>
+          <button class="modal__color modal__color--purple" data-color="#89609E"></button>
+          <button class="modal__color modal__color--pink" data-color="#CD5A90"></button>
+          <button class="modal__color modal__color--lightgreen" data-color="#4BBF6B"></button>
+          <button class="modal__color modal__color--lightblue" data-color="#0AAECB"></button>
+          <button class="modal__color modal__color--gray" data-color="#838C90"></div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <script src="js/myBoards.js"></script>
+</body>
+
 </html>
