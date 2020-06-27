@@ -5,12 +5,18 @@
   box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+html {
+  width: 100%;
+  height: 100%;
+}
 
 body {
   background-color: #fafbfc;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #172b4d;
+  height: 100%;
 }
 
 /* BUTTONS */
@@ -39,9 +45,9 @@ body {
 }
 
 /* FORMs */
-.form-container{
-  border-radius: .3em;
-  background-color: #F4F5F7;
+.form-container {
+  border-radius: 0.3em;
+  background-color: #f4f5f7;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
@@ -49,21 +55,21 @@ body {
   justify-content: space-between;
 }
 
-.login-form{
+.login-form {
   height: 354px;
   width: 450px;
   padding: 4em 0;
   margin: 8em auto 0 auto;
 }
 
-.signup-form{
+.signup-form {
   height: 500px;
   width: 450px;
   padding: 2em 0;
   margin: 4em auto 0 auto;
 }
 
-.profile-form{
+.profile-form {
   height: 450px;
   width: 450px;
   padding: 2em 0;
@@ -75,41 +81,39 @@ body {
   flex-direction: column;
 }
 
-.form-label{
+.form-label {
   font-weight: bold;
-  margin-bottom: .4em;
+  margin-bottom: 0.4em;
 }
 
-.form-input{
-  border: 1px solid #0079BF;
-  border-radius: .3em;
-  padding: .5em;
+.form-input {
+  border: 1px solid #0079bf;
+  border-radius: 0.3em;
+  padding: 0.5em;
   width: 230px;
 }
 
-.form-link{
+.form-link {
   text-decoration: none;
-  color: #0079BF;
+  color: #0079bf;
 }
 
-.profile-button-container{
+.profile-button-container {
   width: 230px;
   display: flex;
   justify-content: space-between;
 }
 
 /* desabilitar input */
-.disable{
+.disable {
   pointer-events: none;
-  border: 1px solid #EBECF0;
+  border: 1px solid #ebecf0;
 }
 
 /* ocultar boton */
-.hide{
+.hide {
   display: none;
 }
-
-
 
 /* ****** CONTAINERS ******/
 
@@ -157,7 +161,220 @@ body {
   border-radius: 0.3em;
 }
 
-/* body aqui van los boards */
+/*** BOARDS ***/
 .boards-container {
   width: 80%;
+  padding: 0 30px 30px;
+}
+
+.boards__container-title {
+  font-weight: bold;
+  font-size: 16px;
+  color: #172b4d;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+.boards__container-title > img {
+  margin-right: 5px;
+}
+
+.starred__container,
+.unstarred__container {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: start;
+}
+
+.boards__modal-button {
+  background: #f0f2f5;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  width: 190px;
+  height: 96px;
+  top: 50%;
+  left: 50%;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #172b4d;
+  cursor: pointer;
+}
+
+.board {
+  width: 190px;
+  height: 96px;
+  border-radius: 3px;
+  padding: 8px;
+  margin: 0 16px 16px 0;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+
+.board__title {
+  outline: none;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffffff;
+  width: 154px;
+}
+
+.board__actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.action {
+  filter: brightness(0);
+  margin-left: 8px;
+  width: 12px;
+  height: 12px;
+  visibility: hidden;
+}
+
+.board:hover .action {
+  fill: black;
+  visibility: visible;
+}
+
+.starred {
+  visibility: visible;
+  filter: invert(100%) sepia() saturate(10000%) hue-rotate(0deg);
+}
+
+.boards__starred {
+  display: none;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content/Box */
+.modal__content {
+  background-color: gray;
+  border: none;
+  border-radius: 3px;
+  margin: 10% auto;
+  padding: 6px 8px;
+  width: 190px;
+  height: 70px;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+#modal__title {
+  outline: none;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.25);
+  width: 154px;
+}
+
+/* Palette */
+.modal__palette {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 5px;
+  width: fit-content;
+  position: absolute;
+  top: 0;
+  right: -80px;
+}
+
+.modal__color {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.modal__color:hover {
+  border: solid 1px white;
+}
+
+.modal__color--blue {
+  background-color: #0079bf;
+}
+.modal__color--yellow {
+  background-color: #d29034;
+}
+.modal__color--green {
+  background-color: #519839;
+}
+.modal__color--red {
+  background-color: #b04632;
+}
+.modal__color--purple {
+  background-color: #89609e;
+}
+.modal__color--pink {
+  background-color: #cd5a90;
+}
+.modal__color--lightgreen {
+  background-color: #4bbf6b;
+}
+.modal__color--lightblue {
+  background-color: #0aaecb;
+}
+.modal__color--gray {
+  background-color: #838c90;
+}
+
+.modal__create-button {
+  position: absolute;
+  top: 75px;
+  left: 0;
+  background: #f4f5f7;
+  border-radius: 3px;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  padding: 6px 12px;
+  color: #172b4d;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* The Close Button */
+.close {
+  color: #f4f5f7;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  right: 5px;
+  top: 0px;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
