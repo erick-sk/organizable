@@ -29,7 +29,21 @@
       </nav>
 
       <main class="boards-container">
-        <button class="boards__modal-button">Create a new Board</button>
+        <div class="boards__starred">
+          <header>
+            <h2 class="boards__container-title"><img src="/assets/star.svg" alt="">Starred Boards</h2>
+          </header>
+          <div class="starred__container">
+          </div>
+        </div>
+        <div class="boards__unstarred">
+          <header>
+            <h2 class="boards__container-title"><img src="/assets/keys.svg" alt="">Your Boards</h2>
+          </header>
+          <div class="unstarred__container">
+            <button class="boards__modal-button">Create a new Board</button>
+          </div>
+        </div>
       </main>
 
       <div class="modal">

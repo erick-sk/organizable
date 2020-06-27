@@ -113,7 +113,23 @@ body {
 /*** BOARDS ***/
 .boards-container {
   width: 80%;
-  padding: 30px;
+  padding: 0 30px 30px;
+}
+
+.boards__container-title {
+  font-weight: bold;
+  font-size: 16px;
+  color: #172b4d;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+.boards__container-title > img {
+  margin-right: 5px;
+}
+
+.starred__container,
+.unstarred__container {
   display: flex;
   flex-flow: row wrap;
   align-content: start;
@@ -133,6 +149,55 @@ body {
   font-size: 16px;
   color: #172b4d;
   cursor: pointer;
+}
+
+.board {
+  width: 190px;
+  height: 96px;
+  border-radius: 3px;
+  padding: 8px;
+  margin: 0 16px 16px 0;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+
+.board__title {
+  outline: none;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffffff;
+  width: 154px;
+}
+
+.board__actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.action {
+  filter: brightness(0);
+  margin-left: 8px;
+  width: 12px;
+  height: 12px;
+  visibility: hidden;
+}
+
+.board:hover .action {
+  fill: black;
+  visibility: visible;
+}
+
+.starred {
+  visibility: visible;
+  filter: invert(100%) sepia() saturate(10000%) hue-rotate(0deg);
+}
+
+.boards__starred {
+  display: none;
 }
 
 /* The Modal (background) */
@@ -261,50 +326,4 @@ body {
   color: black;
   text-decoration: none;
   cursor: pointer;
-}
-
-/* Board */
-.board {
-  width: 190px;
-  height: 96px;
-  border-radius: 3px;
-  padding: 8px;
-  margin: 0 16px 16px 0;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-between;
-}
-
-.board__title {
-  outline: none;
-  border: none;
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
-  font-size: 16px;
-  color: #ffffff;
-  width: 154px;
-}
-
-.board__actions {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.action {
-  filter: brightness(0);
-  margin-left: 8px;
-  width: 12px;
-  height: 12px;
-  visibility: hidden;
-}
-
-.board:hover .action {
-  fill: black;
-  visibility: visible;
-}
-
-.starred {
-  visibility: visible;
-  filter: invert(100%) sepia() saturate(10000%) hue-rotate(0deg);
 }

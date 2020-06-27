@@ -1,6 +1,6 @@
 // local storage
 
-// Modal functionality
+// MODAL FUNCTIONALITY
 const modal = document.querySelector('.modal');
 const modalBtn = document.querySelector('.boards__modal-button');
 const span = document.getElementsByClassName('close')[0];
@@ -20,15 +20,25 @@ window.onclick = function(event) {
   }
 };
 
-// Board functionality
+// BOARD FUNCTIONALITY
 const createBoardBtn = document.querySelector('.modal__create-button');
-const boardsContainer = document.querySelector('.boards-container');
+const normalBoards = document.querySelector('.unstarred__container');
+const starredBoards = document.querySelector('.starred__container');
 const openModalBtn = document.querySelector('.boards__modal-button');
 
 createBoardBtn.addEventListener('click', function() {
   const board = createBoard();
-  boardsContainer.insertBefore(board, openModalBtn);
+  // normalBoards.insertBefore(board, openModalBtn);
+  insertBoard(normalBoards, board, openModalBtn);
 });
+
+function insertBoard(container, board, referenceObj = undefined) {
+  if (referenceObj !== undefined) {
+    container.insertBefore(board, referenceObj);
+  } else {
+    container.append(board);
+  }
+}
 
 const colorBtns = document.querySelectorAll('.modal__color');
 colorBtns.forEach(colorBtn => colorBtn.addEventListener('click', setModalColor));
@@ -54,6 +64,14 @@ function createBoard() {
   const star = board.querySelector('.star');
   star.addEventListener('click', function() {
     star.classList.toggle('starred');
+    const starredDiv = document.querySelector('.boards__starred');
+    if (star.classList.contains('starred')) {
+      insertBoard(starredBoards, board);
+      starredDiv.style.display = 'block';
+    } else {
+      insertBoard(normalBoards, board, openModalBtn);
+      starredDiv.style.display = 'none';
+    }
   });
   return board;
 }
