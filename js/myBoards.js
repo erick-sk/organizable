@@ -32,14 +32,6 @@ createBoardBtn.addEventListener('click', function() {
   insertBoard(normalBoards, board, openModalBtn);
 });
 
-function insertBoard(container, board, referenceObj = undefined) {
-  if (referenceObj !== undefined) {
-    container.insertBefore(board, referenceObj);
-  } else {
-    container.append(board);
-  }
-}
-
 const colorBtns = document.querySelectorAll('.modal__color');
 colorBtns.forEach(colorBtn => colorBtn.addEventListener('click', setModalColor));
 const modalContainer = document.querySelector('.modal__content');
@@ -78,6 +70,10 @@ function createBoard() {
   return board;
 }
 
-// if (starredBoards.childElementCount === 0) {
-
-// }
+function insertBoard(container, board, referenceObj = undefined) {
+  if (referenceObj !== undefined) {
+    container.insertBefore(board, referenceObj);
+  } else {
+    container.append(board);
+  }
+}
