@@ -28,7 +28,7 @@ async function createNewUser(username, password, email, firstName, lastName) {
     alert(`Welcome ${data.firstName}!`);
     window.user = data;
     localStorage.setItem("user", JSON.stringify(data));
-    window.location.href = "file:///home/marvin/Escritorio/organizable/myBoards.html";
+    window.location.href = "myBoards.html";
   }
 }
 

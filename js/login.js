@@ -23,7 +23,7 @@ async function getUser(username, password) {
   } else {
     window.user = data;
     localStorage.setItem("user", JSON.stringify(data));
-    window.location.href = "file:///home/marvin/Escritorio/organizable/myBoards.html"
+    window.location.href = "myBoards.html"
   }
 }
 
